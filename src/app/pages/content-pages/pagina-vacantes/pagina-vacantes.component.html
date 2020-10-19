@@ -1,0 +1,159 @@
+<!-- Just an image -->
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="
+    background: rgb(255, 204, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 204, 0, 0.8) 0%,
+      rgba(229, 48, 18, 0.8) 100%
+    );
+  "
+>
+  <a class="navbar-brand" [routerLink]="['/']">
+    <img src="../../../../assets/img/logo.png" width="50" height="50" alt="" />
+  </a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarText"
+    aria-controls="navbarText"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto"></ul>
+    <ul class="navbar-nav mr-4">
+      <li class="nav-item active">
+        <button class="btn btn-info" [routerLink]="['/pages/login']">
+          Login
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="color: white; font-weight: bolder">Tip Capital Humano</h1>
+    <p style="color: white; font-weight: bold">
+      Conoce todas nuestras vacantes
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-lg-2 sidebar-filtros">
+    <app-sidebar-filtros></app-sidebar-filtros>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-lg-10">
+    <div class="container">
+      <!-- Decks section start -->
+      <section id="vacantes">
+        <div class="row mt-2">
+          <div class="col-md-12">
+            <div class="content-header">Vacantes</div>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-content">
+                <img
+                  class="card-img-top img-fluid"
+                  src="assets/img/photos/05.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Coordinador de sistemas</h4>
+                  <p class="card-text">
+                    Supervisar la correcta aplicación de mantenimiento de la Red
+                    LAN y WLAN, garantizar salud de los equipos de cómputo e
+                    impresión, mantener la correcta operación de los servidores
+                    y sus servicios, óptimo funcionamiento de la comunicación
+                    interna y externa, supervisión de proyectos.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer align-middle pt-0">
+                <div class="row text-center">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-info btn-block">
+                      Ver más
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-content">
+                <img
+                  class="card-img-top img-fluid"
+                  src="assets/img/photos/05.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Coordinador de sistemas</h4>
+                  <p class="card-text">
+                    Supervisar la correcta aplicación de mantenimiento de la Red
+                    LAN y WLAN, garantizar salud de los equipos de cómputo e
+                    impresión, mantener la correcta operación de los servidores
+                    y sus servicios, óptimo funcionamiento de la comunicación
+                    interna y externa, supervisión de proyectos.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer align-middle pt-0">
+                <div class="row text-center">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-info btn-block">
+                      Ver más
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+              <div class="card-content">
+                <img
+                  class="card-img-top img-fluid"
+                  src="assets/img/photos/05.jpg"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Coordinador de sistemas</h4>
+                  <p class="card-text">
+                    Supervisar la correcta aplicación de mantenimiento de la Red
+                    LAN y WLAN, garantizar salud de los equipos de cómputo e
+                    impresión, mantener la correcta operación de los servidores
+                    y sus servicios, óptimo funcionamiento de la comunicación
+                    interna y externa, supervisión de proyectos.
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer align-middle pt-0">
+                <div class="row text-center">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="button" class="btn btn-info btn-block">
+                      Ver más
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- Decks section end -->

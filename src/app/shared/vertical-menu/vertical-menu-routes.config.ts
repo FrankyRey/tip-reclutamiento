@@ -1,0 +1,55 @@
+import { RouteInfo } from "./vertical-menu.metadata";
+
+//Sidebar menu Routes and data
+export const ROUTES: RouteInfo[] = [
+  {
+    path: "/dashboard/dashboard1",
+    title: "Dashboard",
+    icon: "ft-home",
+    class: "",
+    badge: "",
+    badgeClass: "",
+    isExternalLink: false,
+    submenu: [],
+  },
+  {
+    path: "/components/clientes",
+    title: "Clientes",
+    icon: "ft-user",
+    class: "",
+    badge: "",
+    badgeClass: "",
+    isExternalLink: false,
+    submenu: [],
+  },
+  {
+    path: "/components/categoria-vacantes",
+    title: "Categorías de vacantes",
+    icon: "ft-tag",
+    class: "",
+    badge: "",
+    badgeClass: "",
+    isExternalLink: false,
+    submenu: [],
+  },
+  {
+    path: "/components/vacantes",
+    title: "Vacantes",
+    icon: "ft-star",
+    class: "",
+    badge: "",
+    badgeClass: "",
+    isExternalLink: false,
+    submenu: [],
+  },
+  {
+    path: "/components/postulantes",
+    title: "Postulantes",
+    icon: "ft-check-circle",
+    class: "",
+    badge: "",
+    badgeClass: "",
+    isExternalLink: false,
+    submenu: [],
+  },
+];
