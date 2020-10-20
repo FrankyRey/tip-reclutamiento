@@ -43,6 +43,8 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { VacantesComponent } from './vacantes/vacantes.component';
 import { PostulantesComponent } from './postulantes/postulantes.component';
 import { CategoriaVacantesComponent } from './categoria-vacantes/categoria-vacantes.component';
+import { EscolaridadComponent } from './escolaridad/escolaridad.component';
+import { AreaEstudioComponent } from './area-estudio/area-estudio.component';
 
 @NgModule({
     imports: [
@@ -92,6 +94,8 @@ import { CategoriaVacantesComponent } from './categoria-vacantes/categoria-vacan
         VacantesComponent,
         PostulantesComponent,
         CategoriaVacantesComponent,
+        EscolaridadComponent,
+        AreaEstudioComponent,
     ]
 })
 export class UIComponentsModule { }

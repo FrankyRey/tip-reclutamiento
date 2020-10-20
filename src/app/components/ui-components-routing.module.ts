@@ -34,6 +34,8 @@ import { ClientesComponent } from "./clientes/clientes.component";
 import { VacantesComponent } from "./vacantes/vacantes.component";
 import { CategoriaVacantesComponent } from "./categoria-vacantes/categoria-vacantes.component";
 import { PostulantesComponent } from "./postulantes/postulantes.component";
+import { EscolaridadComponent } from './escolaridad/escolaridad.component';
+import { AreaEstudioComponent } from './area-estudio/area-estudio.component';
 
 const routes: Routes = [
   {
@@ -44,13 +46,6 @@ const routes: Routes = [
         component: ClientesComponent,
         data: {
           title: "Clientes",
-        },
-      },
-      {
-        path: "categoria-vacantes",
-        component: CategoriaVacantesComponent,
-        data: {
-          title: "Categorías de Vacantes",
         },
       },
       {
@@ -65,6 +60,27 @@ const routes: Routes = [
         component: PostulantesComponent,
         data: {
           title: "Postulantes",
+        },
+      },
+      {
+        path: "categoria-vacantes",
+        component: CategoriaVacantesComponent,
+        data: {
+          title: "Categorías de Vacantes",
+        },
+      },
+      {
+        path: "escolaridad",
+        component: EscolaridadComponent,
+        data: {
+          title: "Escolaridad",
+        },
+      },
+      {
+        path: "area-estudio",
+        component: AreaEstudioComponent,
+        data: {
+          title: "Área de estudio",
         },
       },
       {
