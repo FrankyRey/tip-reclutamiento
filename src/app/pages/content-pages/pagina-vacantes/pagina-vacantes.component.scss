@@ -1,7 +1,10 @@
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
     url("../../../../assets/img/banner/vacantes.jpg");
 
   /* Set a specific height */
@@ -22,6 +25,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  background-color: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.22);
+  padding: 20px;
 }
 
 .sidebar-filtros {
