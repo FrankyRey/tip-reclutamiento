@@ -45,6 +45,8 @@ import { PostulantesComponent } from './postulantes/postulantes.component';
 import { CategoriaVacantesComponent } from './categoria-vacantes/categoria-vacantes.component';
 import { EscolaridadComponent } from './escolaridad/escolaridad.component';
 import { AreaEstudioComponent } from './area-estudio/area-estudio.component';
+import { FormCategoriaVacantesComponent } from './form-categoria-vacantes/form-categoria-vacantes.component';
+import { UploadProgressComponent } from '../upload-progress/upload-progress.component';
 
 @NgModule({
     imports: [
@@ -96,6 +98,8 @@ import { AreaEstudioComponent } from './area-estudio/area-estudio.component';
         CategoriaVacantesComponent,
         EscolaridadComponent,
         AreaEstudioComponent,
+        FormCategoriaVacantesComponent,
+        UploadProgressComponent
     ]
 })
 export class UIComponentsModule { }

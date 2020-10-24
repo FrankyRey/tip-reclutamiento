@@ -36,6 +36,7 @@ import { CategoriaVacantesComponent } from "./categoria-vacantes/categoria-vacan
 import { PostulantesComponent } from "./postulantes/postulantes.component";
 import { EscolaridadComponent } from './escolaridad/escolaridad.component';
 import { AreaEstudioComponent } from './area-estudio/area-estudio.component';
+import { FormCategoriaVacantesComponent } from './form-categoria-vacantes/form-categoria-vacantes.component';
 
 const routes: Routes = [
   {
@@ -65,6 +66,13 @@ const routes: Routes = [
       {
         path: "categoria-vacantes",
         component: CategoriaVacantesComponent,
+        data: {
+          title: "Categorías de Vacantes",
+        },
+      },
+      {
+        path: "form-categoria-vacantes",
+        component: FormCategoriaVacantesComponent,
         data: {
           title: "Categorías de Vacantes",
         },
