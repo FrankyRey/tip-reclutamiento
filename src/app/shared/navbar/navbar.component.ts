@@ -9,10 +9,17 @@ import { FormControl } from '@angular/forms';
 import { LISTITEMS } from '../data/template-search';
 import { Router } from '@angular/router';
 
+//Import Model
+import { User } from 'app/models/user';
+
+//Import Service
+import { UserService } from 'app/services/user.service';
+
 @Component({
   selector: "app-navbar",
   templateUrl: "./navbar.component.html",
-  styleUrls: ["./navbar.component.scss"]
+  styleUrls: ["./navbar.component.scss"],
+  providers: [UserService]
 })
 export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   currentLang = "en";
@@ -30,6 +37,9 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
   public isCollapsed = true;
   layoutSub: Subscription;
   configSub: Subscription;
+  token;
+  identity;
+
 
   @ViewChild('search') searchElement: ElementRef;
   @ViewChildren('searchResults') searchResults: QueryList<any>;
@@ -45,10 +55,16 @@ export class NavbarComponent implements OnInit, AfterViewInit, OnDestroy {
 
   public config: any = {};
 
-  constructor(public translate: TranslateService,
+  constructor(
+    public translate: TranslateService,
     private layoutService: LayoutService,
     private router: Router,
-    private configService: ConfigService, private cdr: ChangeDetectorRef) {
+    private configService: ConfigService,
+    private cdr: ChangeDetectorRef,
+    private _userService: UserService
+  ) {
+    this.identity = this._userService.getIdentity();
+    console.log(this.identity);
 
     const browserLang: string = translate.getBrowserLang();
     translate.use(browserLang.match(/en|es|pt|de/) ? browserLang : "en");

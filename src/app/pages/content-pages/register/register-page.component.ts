@@ -5,20 +5,38 @@ import { NgForm, FormGroup, FormControl, Validators, FormBuilder } from '@angula
 import { MustMatch } from '../../../shared/directives/must-match.validator';
 import { Router } from '@angular/router';
 
+//Import Model
+import { User } from '../../../models/user';
+
+//Import Service
+import { UserService } from '../../../services/user.service';
+
 @Component({
   selector: 'app-register-page',
   templateUrl: './register-page.component.html',
-  styleUrls: ['./register-page.component.scss']
+  styleUrls: ['./register-page.component.scss'],
+  providers: [UserService]
 })
 
 export class RegisterPageComponent implements OnInit {
+  public user: User;
+  public status: string;
   registerFormSubmitted = false;
   registerForm: FormGroup;
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private _userService: UserService
+  ) {
+    this.user = new User(1,'','','ROLE_USER','','','','');
+  }
 
   ngOnInit() {
+    console.log(this._userService.test());
     this.registerForm = this.formBuilder.group({
-      name: ['', Validators.required],
+      nombre: ['', Validators.required],
+      apellidos: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required],
@@ -40,6 +58,23 @@ export class RegisterPageComponent implements OnInit {
       return;
     }
 
-    this.router.navigate(['/pages/login']);
+    this.user.nombre = this.registerForm.value.nombre;
+    this.user.apellidos = this.registerForm.value.apellidos;
+    this.user.email = this.registerForm.value.email;
+    this.user.password = this.registerForm.value.password;
+
+    this._userService.register(this.user).subscribe(
+      response => {
+        if(response.status == 'success') {
+          this.status = 'success'
+          this.router.navigate(['/pages/login']);
+        } else {
+          this.status = 'error';
+        }
+      },
+      error => {
+        console.log(<any>error);
+      }
+    );
   }
 }

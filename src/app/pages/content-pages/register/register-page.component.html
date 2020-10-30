@@ -11,15 +11,23 @@
                 <img src="assets/img/gallery/register.png" alt="" class="img-fluid" width="350" height="230">
               </div>
               <div class="col-lg-6 col-md-12 px-4 py-3">
-                <h4 class="card-title mb-2">Create Account</h4>
-                <p>Fill the below form to create a new account.</p>
+                <h4 class="card-title mb-2">Crear Usuario</h4>
+                <p>Llena el formulario a continuación para crear un nuevo usuario.</p>
 
                 <form [formGroup]="registerForm">
                   <div class="form-group">
-                    <input type="text" formControlName="name" class="form-control mb-2" placeholder="Name"
-                      [ngClass]="{ 'is-invalid': registerFormSubmitted && rf.name.invalid, 'is-valid': registerFormSubmitted && !rf.name.invalid }"
+                    <input type="text" formControlName="nombre" class="form-control mb-2" placeholder="Nombre"
+                      [ngClass]="{ 'is-invalid': registerFormSubmitted && rf.nombre.invalid, 'is-valid': registerFormSubmitted && !rf.nombre.invalid }"
                       required>
-                    <div *ngIf="registerFormSubmitted && (rf.name.invalid || rf.name.errors?.required)"
+                    <div *ngIf="registerFormSubmitted && (rf.nombre.invalid || rf.nombre.errors?.required)"
+                      class="help-block mt-1 text-danger"> <i class="ft-alert-circle align-middle"></i> Name is
+                      required</div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" formControlName="apellidos" class="form-control mb-2" placeholder="Aepllidos"
+                      [ngClass]="{ 'is-invalid': registerFormSubmitted && rf.apellidos.invalid, 'is-valid': registerFormSubmitted && !rf.apellidos.invalid }"
+                      required>
+                    <div *ngIf="registerFormSubmitted && (rf.apellidos.invalid || rf.apellidos.errors?.required)"
                       class="help-block mt-1 text-danger"> <i class="ft-alert-circle align-middle"></i> Name is
                       required</div>
                   </div>
